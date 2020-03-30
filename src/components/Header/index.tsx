@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import Switch from "react-switch";
 import { shade } from "polished";
 import { ThemeContext } from "styled-components";
-import { Container } from "./styles";
+import { Container, Menu } from "./styles";
 
 interface Props {
   toggleTheme(): void;
@@ -13,8 +13,16 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
   return (
     <Container>
-      Hello World
+      <Menu>
+        <li>Home</li>
+        <li>About</li>
+        <li>Work</li>
+        <li>Education</li>
+        <li>Skills</li>
+        <li>Contact</li>
+      </Menu>
       <Switch
+        id="themeSwitch"
         onChange={toggleTheme}
         checked={title === "dark"}
         checkedIcon={false}
