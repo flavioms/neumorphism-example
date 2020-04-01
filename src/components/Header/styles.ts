@@ -1,27 +1,40 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-  width: 100%;
-  height: 60px;
-  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2em auto;
+  width: 90%;
+  height: 80px;
+  background: ${props => props.theme.colors.primary};
   color: ${props => props.theme.colors.text};
-  font-size: 1.2em;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 30px;
-  transition: color 0.5s step-start
-    ${props => (props.theme.title === "dark" ? `${1.5 - 0.6}s` : "0s")};
-`;
+  padding: 2em;
+  transition: all 0.5s;
+  border-radius: 50px;
+  box-shadow: 20px 20px 60px ${props => props.theme.colors.darkShadow},
+    -20px -20px 60px ${props => props.theme.colors.lightShadow};
 
-export const Menu = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 50%;
-  list-style: none;
+  & > img {
+    width: 100%;
+    max-width: 70px;
+    filter: ${props =>
+      props.theme.title === "light" ? "invert(0)" : "invert(1)"};
+  }
+
+  & > ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-size: 1em;
+    font-weight: 700;
+
+    li {
+      margin: 0 1.5em;
+    }
+  }
 `;

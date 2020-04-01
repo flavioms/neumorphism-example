@@ -6,6 +6,7 @@ export default {
     secundary: "#C2CBD9",
     lightShadow: "#FFFFFF",
     darkShadow: "#A3B1C6",
+    orange: "#fe7234",
     text: "#333"
   }
 };

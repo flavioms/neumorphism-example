@@ -5,17 +5,12 @@ import light from "./styles/themes/light";
 import dark from "./styles/themes/dark";
 import GlobalStyle from "./styles/global";
 import Header from "./components/Header";
+import Home from "./pages/Home";
 
 function App() {
   const [theme, setTheme] = usePersistedState<DefaultTheme>("theme", light);
-  const divClip = useRef<HTMLDivElement>(null);
   const toggleTheme = () => {
     setTheme(theme.title === "light" ? dark : light);
-    if (theme.title === "light") {
-      divClip.current?.classList.add("anim");
-    } else {
-      divClip.current?.classList.remove("anim");
-    }
   };
 
   return (
@@ -23,7 +18,7 @@ function App() {
       <div className="App">
         <GlobalStyle />
         <Header toggleTheme={toggleTheme} />
-        <div className="clip" ref={divClip}></div>
+        <Home />
       </div>
     </ThemeProvider>
   );

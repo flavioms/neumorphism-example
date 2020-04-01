@@ -2,7 +2,8 @@ import React, { useContext } from "react";
 import Switch from "react-switch";
 import { shade } from "polished";
 import { ThemeContext } from "styled-components";
-import { Container, Menu } from "./styles";
+import Logo from "../../assets/icon-adidas-logo.svg";
+import { Container } from "./styles";
 
 interface Props {
   toggleTheme(): void;
@@ -13,14 +14,15 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
   return (
     <Container>
-      <Menu>
-        <li>Home</li>
-        <li>About</li>
-        <li>Work</li>
-        <li>Education</li>
-        <li>Skills</li>
-        <li>Contact</li>
-      </Menu>
+      <img src={Logo} alt="adidas" />
+      <ul>
+        <li>Homem</li>
+        <li>Mulher</li>
+        <li>Kids</li>
+        <li>Esportes</li>
+        <li>Marcas</li>
+        <li>Coleções</li>
+      </ul>
       <Switch
         id="themeSwitch"
         onChange={toggleTheme}
@@ -32,6 +34,8 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
         handleDiameter={20}
         offColor={colors.secundary}
         onColor={shade(0.2, colors.darkShadow)}
+        onHandleColor={colors.orange}
+        offHandleColor={colors.orange}
       />
     </Container>
   );
