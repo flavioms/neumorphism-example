@@ -8,6 +8,8 @@ Este projeto é resultado de um breve estudo do estilo neumorphism junto com o s
 - [Styled-Components](https://github.com/styled-components/styled-components)
 - [Polished](https://github.com/styled-components/polished)
 
+![](neumorphism.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
