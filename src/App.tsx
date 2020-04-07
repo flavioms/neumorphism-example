@@ -1,4 +1,4 @@
-import React, { useRef, useCallback } from "react";
+import React from "react";
 import { ThemeProvider, DefaultTheme } from "styled-components";
 import usePersistedState from "./utils/usePersistededState";
 import light from "./styles/themes/light";

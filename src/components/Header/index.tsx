@@ -3,7 +3,7 @@ import Switch from "react-switch";
 import { shade } from "polished";
 import { ThemeContext } from "styled-components";
 import Logo from "../../assets/icon-adidas-logo.svg";
-import { Container } from "./styles";
+import { Container, Menu } from "./styles";
 
 interface Props {
   toggleTheme(): void;
@@ -15,14 +15,14 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
   return (
     <Container>
       <img src={Logo} alt="adidas" />
-      <ul>
+      <Menu>
         <li>Homem</li>
         <li>Mulher</li>
         <li>Kids</li>
         <li>Esportes</li>
         <li>Marcas</li>
         <li>Coleções</li>
-      </ul>
+      </Menu>
       <Switch
         id="themeSwitch"
         onChange={toggleTheme}
