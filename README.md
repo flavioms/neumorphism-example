@@ -1,4 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Switch Theme with Neumorphism
+
+Este projeto é resultado de um breve estudo do estilo neumorphism junto com o switch theme, que tem por finalidade permitir que o usuário escolha entre tema claro e escuro e ainda gravar a preferência no localstorage.<br />
+
+**O projeto foi feito utilizando:**
+- [ReactJS](https://github.com/facebook/create-react-app)
+- [TypeScript](https://github.com/microsoft/TypeScript)
+- [Styled-Components](https://github.com/styled-components/styled-components)
+- [Polished](https://github.com/styled-components/polished)
 
 ## Available Scripts
 
